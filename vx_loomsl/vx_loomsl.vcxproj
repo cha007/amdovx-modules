@@ -16,7 +16,7 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v120</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
@@ -38,7 +38,9 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>$(ProjectName)_test</TargetName>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -87,8 +89,10 @@
     <ClInclude Include="kernels\seam_find.h" />
     <ClInclude Include="kernels\warp.h" />
     <ClInclude Include="live_stitch_api.h" />
+    <ClInclude Include="loom_shell_util.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="help.cpp" />
     <ClCompile Include="kernels\alpha_blend.cpp" />
     <ClCompile Include="kernels\chroma_key.cpp" />
     <ClCompile Include="kernels\color_convert.cpp" />
@@ -103,6 +107,8 @@
     <ClCompile Include="kernels\seam_find.cpp" />
     <ClCompile Include="kernels\warp.cpp" />
     <ClCompile Include="live_stitch_api.cpp" />
+    <ClCompile Include="loom_shell_util.cpp" />
+    <ClCompile Include="test.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

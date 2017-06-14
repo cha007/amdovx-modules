@@ -63,6 +63,9 @@
     <ClInclude Include="kernels\noise_filter.h">
       <Filter>Header Files\kernels</Filter>
     </ClInclude>
+    <ClInclude Include="loom_shell_util.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="kernels\warp.cpp">
@@ -106,6 +109,15 @@
     </ClCompile>
     <ClCompile Include="kernels\noise_filter.cpp">
       <Filter>Source Files\kernels</Filter>
+    </ClCompile>
+    <ClCompile Include="test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="loom_shell_util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="help.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

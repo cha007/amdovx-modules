@@ -1312,7 +1312,7 @@ vx_status CExpCompensator::applygains_thread_func(vx_int32 img_num, char *in_bas
 		g_g = powf(g_g, 0.454546f);
 		g_b = powf(g_b, 0.454546f);
 #endif
-	//	printf("ImageNum:%d Rg: %f Gg: %f Bg: %f\n", img_num, g_r, g_g, g_b);
+		printf("ImageNum:%d Rg: %f Gg: %f Bg: %f\n", img_num, g_r, g_g, g_b);
 	}
 	else{
 		g_r = g_g = g_b = g_y;	// todo: check if we need to apply gain factor for RGB

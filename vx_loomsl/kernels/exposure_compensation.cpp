@@ -1594,6 +1594,7 @@ static vx_status VX_CALLBACK exposure_comp_calcRGBErrorFn_opencl_codegen(
 		"	}\n"
 		"}\n";
 	if (mask_image)ERROR_CHECK_STATUS(vxReleaseImage(&mask_image));
+	saveKernel("exposure_compensation.cl", opencl_kernel_code);
 	return VX_SUCCESS;
 }
 

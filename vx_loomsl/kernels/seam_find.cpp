@@ -1039,6 +1039,7 @@ static vx_status VX_CALLBACK seamfind_scene_detect_opencl_codegen(
 	opencl_kernel_code +=
 		"	}\n"
 		"}\n";
+	saveKernel("seam_find.cl", opencl_kernel_code);
 
 	return VX_SUCCESS;
 }

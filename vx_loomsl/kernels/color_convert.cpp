@@ -577,7 +577,7 @@ static vx_status VX_CALLBACK color_convert_opencl_codegen(
 	opencl_kernel_code +=
 		"  }\n"
 		"}\n";
-
+	saveKernel("color_convert.cl", opencl_kernel_code);
 	return VX_SUCCESS;
 }
 

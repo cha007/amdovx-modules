@@ -46,7 +46,7 @@ THE SOFTWARE.
 #define _USE_MATH_DEFINES
 #include <math.h>
 #include <algorithm>
-
+#include <fstream>
 #if _WIN32
 #include <intrin.h>
 #else
@@ -81,6 +81,8 @@ static inline vx_uint32 GetOneBitCount(vx_uint32 a)
 	return __builtin_popcount(a);
 }
 #endif
+
+void saveKernel(const char* filename, std::string& kernel);
 
 //////////////////////////////////////////////////////////////////////
 //! \brief The AMD extension library for stitching

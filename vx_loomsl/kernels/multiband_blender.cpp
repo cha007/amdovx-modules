@@ -306,6 +306,7 @@ static vx_status VX_CALLBACK multiband_blend_opencl_codegen(
 		" }\n"
 	" }\n";
 	}
+	saveKernel("multiband_blender.cl", opencl_kernel_code);
 	return VX_SUCCESS;
 }
 

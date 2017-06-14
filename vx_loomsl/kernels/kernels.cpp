@@ -35,7 +35,12 @@ THE SOFTWARE.
 #if _WIN32
 #include <Windows.h>
 #endif
-
+void saveKernel(const char* filename, std::string& kernel){
+	std::ofstream fout;
+	fout.open(filename);
+	fout << kernel << std::endl;
+	fout.close();
+}
 ////////////////////////////////////////////////////////////////////////////
 //! \brief The module entry point for publishing kernel.
 SHARED_PUBLIC vx_status VX_API_CALL vxPublishKernels(vx_context context)

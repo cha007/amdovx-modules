@@ -211,6 +211,8 @@ static vx_status VX_CALLBACK noise_filter_opencl_codegen(
 		"}\n"
 		, (int)opencl_local_work[0], (int)opencl_local_work[1], opencl_kernel_function_name, work_items[0], work_items[1]);
 	opencl_kernel_code = item;
+	saveKernel("noise_filter.cl", opencl_kernel_code);
+
 	return VX_SUCCESS;
 }
 

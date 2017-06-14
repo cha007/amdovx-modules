@@ -128,14 +128,14 @@ static vx_status VX_CALLBACK opencl_codegen(
 		"    alpha1 = amd_unpack3(i1.s3)*alpha_normalizer; alpha0 = 1.0f - alpha1;\n"
 		"    f.s1 = mad(amd_unpack1(i0.s2), alpha0, amd_unpack0(i1.s3)*alpha1);\n"
 		"    f.s2 = mad(amd_unpack2(i0.s2), alpha0, amd_unpack1(i1.s3)*alpha1);\n"
-		"    f.s3 = mad(amd_unpack3(i0.s2), alpha0, amd_unpack2(i1.s3)*alpha1);\n"
+		"    f.s3 = mad(amd_unpack3(i0.s2), alpha0, amd_unpack2(i1.s3)*alpha1);\n "
 		"    o0.s2 = amd_pack(f);\n"
 		"    *(__global uint3 *) (o0_buf + o0_offset + (gy * o0_stride) + (gx * 12)) = o0;\n"
 		"  }\n"
 		"}\n"
 		, (int)opencl_local_work[0], (int)opencl_local_work[1], opencl_kernel_function_name, work_items[0], work_items[1]);
 	opencl_kernel_code = item;
-
+	saveKernel("alpha_blend.cl", opencl_kernel_code);
 	return VX_SUCCESS;
 }
 

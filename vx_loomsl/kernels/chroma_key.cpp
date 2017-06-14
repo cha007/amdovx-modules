@@ -231,7 +231,7 @@ static vx_status VX_CALLBACK chroma_key_mask_generation_opencl_codegen(
 		"\n"
 		"	}\n"
 		"}\n";
-
+	saveKernel("chroma_key.cl", opencl_kernel_code);
 	return VX_SUCCESS;
 }
 

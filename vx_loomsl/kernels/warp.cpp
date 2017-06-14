@@ -1284,7 +1284,8 @@ static vx_status VX_CALLBACK warp_opencl_codegen(
 #endif
 	if (s_num_camera_columns)	ERROR_CHECK_STATUS(vxReleaseScalar(&s_num_camera_columns));
 	if (s_alpha_value)			ERROR_CHECK_STATUS(vxReleaseScalar(&s_alpha_value));
-	
+	saveKernel("warp.cl", opencl_kernel_code);
+
 	return VX_SUCCESS;
 }
 

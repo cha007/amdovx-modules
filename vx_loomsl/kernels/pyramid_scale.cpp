@@ -670,7 +670,8 @@ static vx_status VX_CALLBACK half_scale_gaussian_opencl_codegen(
 			"  }\n"
 			"}\n";
 	}
-	
+	saveKernel("pyramid_scale.cl", opencl_kernel_code);
+
 	return VX_SUCCESS;
 }
 

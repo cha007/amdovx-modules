@@ -346,6 +346,7 @@ static vx_status VX_CALLBACK merge_opencl_codegen(
 			"  }\n"
 			"}";
 	}
+	saveKernel("merge.cl", opencl_kernel_code);
 	return VX_SUCCESS;
 }
 
